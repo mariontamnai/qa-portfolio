@@ -10,6 +10,17 @@ face recognition and JWT authentication.
 
 ---
 
+## Test Environment
+| Property | Details |
+|----------|---------|
+| Browser | Chrome |
+| OS | Mac |
+| Screen size | Desktop |
+| Frontend | Deployed on Netlify |
+| Backend | https://secure-online-voting-system-1xj1.onrender.com |
+| Test date | June 2026 |
+| Tested by | Marion Tamnai |
+
 ## Features Being Tested
 - User registration and login
 - Biometric face recognition verification
