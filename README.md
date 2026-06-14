@@ -11,8 +11,13 @@ A secure web-based voting platform integrating biometric
 face recognition and JWT authentication.
 
 - ✅ 8 manual test cases executed
-- 🔧 Tools: Manual testing, Chrome DevTools
+- ✅ 3 bug reports documented
+- ✅ 10 API endpoints tested in Postman
+- ✅ 23 automated API tests passing
+- 🔧 Tools: Manual testing, Chrome DevTools, Postman
 - 📋 [View Test Plan](./voting-system/test-plan.md)
+- 🐛 [View Bug Reports](./voting-system/bug-reports/)
+- 📬 [View Postman Collection](./voting-system/postman/voting-system-api-tests.json)
 
 ---
 
