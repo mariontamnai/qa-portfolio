@@ -56,3 +56,4 @@ face recognition and JWT authentication.
 |--------|---------|----------|--------|
 | [BUG-001](./bug-reports/BUG-001.md) | Add Student — Password | High | Open |
 | [BUG-002](./bug-reports/BUG-002.md) | Add Student — Full Name | Low | Open |
+| [BUG-003](./bug-reports/BUG-003.md) | Get All Students API — Sensitive Fields | Medium | Open |
