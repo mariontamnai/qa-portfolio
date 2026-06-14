@@ -2,10 +2,7 @@
   "info": {
     "_postman_id": "f38f47ae-fd7e-4f15-be54-9f328cd158db",
     "name": "Voting System API Tests",
-    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "55897050",
-    "_collection_link": "https://go.postman.co/collection/55897050-f38f47ae-fd7e-4f15-be54-9f328cd158db?source=collection_link"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
@@ -13,182 +10,95 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": {
-          "raw": "https://secure-online-voting-system-1xj1.onrender.com",
-          "protocol": "https",
-          "host": [
-            "secure-online-voting-system-1xj1",
-            "onrender",
-            "com"
-          ]
-        }
-      },
-      "response": []
+        "url": "https://secure-online-voting-system-1xj1.onrender.com"
+      }
     },
     {
       "name": "Student Login",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "exec": [
-              "pm.test(\"Login successful\", function() {",
-              "    pm.response.to.have.status(200);",
-              "});",
-              "",
-              "pm.test(\"Token is returned\", function() {",
-              "    const response = pm.response.json();",
-              "    pm.expect(response.token).to.exist;",
-              "});",
-              "",
-              "pm.test(\"Student name is returned\", function() {",
-              "    const response = pm.response.json();",
-              "    pm.expect(response.fullName).to.exist;",
-              "});"
-            ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
-          }
-        }
-      ],
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Login successful\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Token is returned\", function() {","    const response = pm.response.json();","    pm.expect(response.token).to.exist;","});","","pm.test(\"Student name is returned\", function() {","    const response = pm.response.json();","    pm.expect(response.fullName).to.exist;","});","","const response = pm.response.json();","pm.environment.set(\"token\", response.token);"],"type": "text/javascript"}}],
       "request": {
         "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"regNumber\": \"sct121-0517/2024\",\n  \"password\": \"MillWhite!12\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/student/login",
-          "protocol": "https",
-          "host": [
-            "secure-online-voting-system-1xj1",
-            "onrender",
-            "com"
-          ],
-          "path": [
-            "api",
-            "auth",
-            "student",
-            "login"
-          ]
-        }
-      },
-      "response": []
+        "header": [{"key": "Content-Type","value": "application/json"}],
+        "body": {"mode": "raw","raw": "{\n  \"regNumber\": \"sct121-0517/2024\",\n  \"password\": \"MillWhite!12\"\n}"},
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/student/login"
+      }
     },
     {
-      "name": "Student Login-Invalid Password",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "exec": [
-              "pm.test(\"Login fails with wrong password\", function() {",
-              "    pm.response.to.have.status(401);",
-              "});",
-              "",
-              "pm.test(\"Error message is returned\", function() {",
-              "    const response = pm.response.json();",
-              "    pm.expect(response.message).to.equal(\"Invalid credentials\");",
-              "});"
-            ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
-          }
-        }
-      ],
+      "name": "Student Login - Invalid Password",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Login fails with wrong password\", function() {","    pm.response.to.have.status(401);","});","","pm.test(\"Error message is returned\", function() {","    const response = pm.response.json();","    pm.expect(response.message).to.equal(\"Invalid credentials\");","});"],"type": "text/javascript"}}],
       "request": {
         "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"regNumber\": \"sct121-0517/2024\",\n  \"password\": \"MillWhite@12\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/student/login",
-          "protocol": "https",
-          "host": [
-            "secure-online-voting-system-1xj1",
-            "onrender",
-            "com"
-          ],
-          "path": [
-            "api",
-            "auth",
-            "student",
-            "login"
-          ]
-        }
-      },
-      "response": []
+        "header": [{"key": "Content-Type","value": "application/json"}],
+        "body": {"mode": "raw","raw": "{\n  \"regNumber\": \"sct121-0517/2024\",\n  \"password\": \"wrongpassword\"\n}"},
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/student/login"
+      }
     },
     {
       "name": "Admin Login",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Admin login step 1 successful\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"OTP sent confirmation\", function() {","    const response = pm.response.json();","    pm.expect(response.otpSent).to.equal(true);","});","","pm.test(\"Admin ID returned\", function() {","    const response = pm.response.json();","    pm.expect(response.adminId).to.exist;","});","","const response = pm.response.json();","pm.environment.set(\"adminId\", response.adminId);"],"type": "text/javascript"}}],
       "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+        "method": "POST",
+        "header": [{"key": "Content-Type","value": "application/json"}],
+        "body": {"mode": "raw","raw": "{\n  \"regNumber\": \"admin001\",\n  \"password\": \"your-admin-password\"\n}"},
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/admin/login"
+      }
     },
     {
       "name": "Admin Verify OTP",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"OTP verification successful\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Admin token returned\", function() {","    const response = pm.response.json();","    pm.expect(response.token).to.exist;","});","","const response = pm.response.json();","pm.environment.set(\"adminToken\", response.token);"],"type": "text/javascript"}}],
       "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+        "method": "POST",
+        "header": [{"key": "Content-Type","value": "application/json"}],
+        "body": {"mode": "raw","raw": "{\n  \"adminId\": \"{{adminId}}\",\n  \"otp\": \"enter-otp-here\"\n}"},
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/admin/verify-otp"
+      }
     },
     {
       "name": "Admin Dashboard Stats",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Dashboard stats returned successfully\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Total students exists\", function() {","    const response = pm.response.json();","    pm.expect(response.totalStudents).to.exist;","});","","pm.test(\"Active elections exists\", function() {","    const response = pm.response.json();","    pm.expect(response.activeElections).to.exist;","});"],"type": "text/javascript"}}],
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
+        "header": [{"key": "Authorization","value": "Bearer {{adminToken}}"}],
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/admin/dashboard"
+      }
     },
     {
       "name": "Get All Students",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Get students successful\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Response is an array\", function() {","    const response = pm.response.json();","    pm.expect(response).to.be.an('array');","});","","pm.test(\"Student has required fields\", function() {","    const response = pm.response.json();","    pm.expect(response[0]).to.have.property('fullName');","    pm.expect(response[0]).to.have.property('regNumber');","});"],"type": "text/javascript"}}],
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
+        "header": [{"key": "Authorization","value": "Bearer {{adminToken}}"}],
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/admin/students"
+      }
     },
     {
       "name": "Get Audit Logs",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Audit logs returned successfully\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Response is an array\", function() {","    const response = pm.response.json();","    pm.expect(response).to.be.an('array');","});","","pm.test(\"Logs have required fields\", function() {","    const response = pm.response.json();","    pm.expect(response[0]).to.have.property('action');","    pm.expect(response[0]).to.have.property('status');","});"],"type": "text/javascript"}}],
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
+        "header": [{"key": "Authorization","value": "Bearer {{adminToken}}"}],
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/admin/audit-logs"
+      }
     },
     {
       "name": "Student Change Password",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Change password successful\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Success message returned\", function() {","    const response = pm.response.json();","    pm.expect(response.message).to.equal(\"Password changed successfully\");","});"],"type": "text/javascript"}}],
       "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+        "method": "POST",
+        "header": [{"key": "Content-Type","value": "application/json"},{"key": "Authorization","value": "Bearer {{token}}"}],
+        "body": {"mode": "raw","raw": "{\n  \"newPassword\": \"MillWhite!12\"\n}"},
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/student/change-password"
+      }
     },
     {
       "name": "Forgot Password",
+      "event": [{"listen": "test","script": {"exec": ["pm.test(\"Forgot password successful\", function() {","    pm.response.to.have.status(200);","});","","pm.test(\"Success message returned\", function() {","    const response = pm.response.json();","    pm.expect(response.message).to.exist;","});"],"type": "text/javascript"}}],
       "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+        "method": "POST",
+        "header": [{"key": "Content-Type","value": "application/json"}],
+        "body": {"mode": "raw","raw": "{\n  \"regNumber\": \"sct121-0517/2024\",\n  \"email\": \"tamnai631@gmail.com\"\n}"},
+        "url": "https://secure-online-voting-system-1xj1.onrender.com/api/auth/forgot-password"
+      }
     }
   ]
 }
