@@ -49,3 +49,10 @@ face recognition and JWT authentication.
 - Anonymous users can view live results without logging in. 
   This is intentional — results are public for transparency 
   while voting requires student authentication.
+
+## Bugs Found
+
+| Bug ID | Feature | Severity | Status |
+|--------|---------|----------|--------|
+| [BUG-001](./bug-reports/BUG-001.md) | Add Student — Password | High | Open |
+| [BUG-002](./bug-reports/BUG-002.md) | Add Student — Full Name | Low | Open |
