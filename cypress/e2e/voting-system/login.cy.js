@@ -1,7 +1,7 @@
 describe('Voting System - Student Login', () => {
 
   beforeEach(() => {
-    cy.visit('https://jkuat-online-voting-sysstem.netlify.app/student-login')
+    cy.visit('/student-login')
   })
 
   it('should load the student login page', () => {

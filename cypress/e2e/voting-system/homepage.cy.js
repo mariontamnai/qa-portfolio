@@ -1,9 +1,8 @@
-Cypress.config('defaultCommandTimeout', 10000)
 
 describe('Voting System - Home Page', () => {
 
   beforeEach(() => {
-    cy.visit('https://jkuat-online-voting-sysstem.netlify.app', { timeout: 30000 })
+    cy.visit('/')
   })
 
   it('should load the home page successfully', () => {
