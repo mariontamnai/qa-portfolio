@@ -28,7 +28,7 @@ face recognition and JWT authentication.
 | Manual Testing | Test plans, bug reports, exploratory testing |
 | API Testing | Postman ✅ |
 | UI Automation | Cypress / Playwright ✅ |
-| Unit Testing | Jest *(coming soon)* |
+| Unit Testing | Jest  ✅  |
 | Cross-browser Automation | Playwright *(coming soon)* |
 
 ---
