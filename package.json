@@ -4,8 +4,9 @@
   "description": "Frontend developer transitioning into QA Engineering.  This repository contains test plans, bug reports, and  automated test suites for my personal projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "jest",
+    "test:cypress": "cypress open"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mariontamnai/qa-portfolio.git"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/mariontamnai/qa-portfolio#readme",
   "devDependencies": {
-    "cypress": "^15.17.0"
+    "cypress": "^15.17.0",
+    "jest": "^30.4.2"
   }
 }
