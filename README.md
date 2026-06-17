@@ -13,7 +13,7 @@ face recognition and JWT authentication.
 - ✅ 8 manual test cases executed
 - 🐛 3 bug reports documented  
 - 📬 23 automated API tests in Postman
-- 🤖 4 Cypress E2E UI tests passing
+- 🤖 21 Cypress E2E UI tests passing across 4 spec files
 - 🔧 Tools: Manual Testing, Chrome DevTools, Postman, Cypress
 - 📋 [View Test Plan](./voting-system/test-plan.md)
 - 🐛 [View Bug Reports](./voting-system/bug-reports/)
@@ -29,6 +29,7 @@ face recognition and JWT authentication.
 | API Testing | Postman ✅ |
 | UI Automation | Cypress / Playwright ✅ |
 | Unit Testing | Jest *(coming soon)* |
+| Cross-browser Automation | Playwright *(coming soon)* |
 
 ---
 
