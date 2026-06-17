@@ -1,0 +1,23 @@
+{
+  "name": "qa-portfolio",
+  "version": "1.0.0",
+  "description": "Frontend developer transitioning into QA Engineering.  This repository contains test plans, bug reports, and  automated test suites for my personal projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariontamnai/qa-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariontamnai/qa-portfolio/issues"
+  },
+  "homepage": "https://github.com/mariontamnai/qa-portfolio#readme",
+  "devDependencies": {
+    "cypress": "^15.17.0"
+  }
+}
