@@ -27,7 +27,7 @@ A secure web-based voting platform with biometric face recognition and JWT authe
 - **High:** server error on short password input
 - **Medium:** sensitive fields exposed in an API response
 
-📋 [Test Plan](https://github.com/mariontamnai/qa-portfolio/blob/main/voting-system/test-plan.md) · 🐛 [Bug Reports](https://github.com/mariontamnai/qa-portfolio/tree/main/voting-system/bug-reports) · 📬 [Postman Collection](https://github.com/mariontamnai/qa-portfolio/blob/main/voting-system/postman/voting-system-api-tests.json) · 🎭 [Playwright Tests](https://github.com/mariontamnai/qa-portfolio/tree/main/voting-qa-suite) · 🌲 [Cypress Tests](https://github.com/mariontamnai/qa-portfolio/tree/main/cypress/e2e/voting-system)
+📋 [Test Plan](https://github.com/mariontamnai/qa-portfolio/blob/main/voting-system/test-plan.md) · 🐛 [Bug Reports](https://github.com/mariontamnai/qa-portfolio/tree/main/voting-system/bug-reports) · 📬 [Postman Collection](https://github.com/mariontamnai/qa-portfolio/blob/main/voting-system/postman/voting-system-api-tests.json) · 🎭 [Playwright Tests](https://github.com/mariontamnai/qa-portfolio/tree/main/voting-QA-suite) · 🌲 [Cypress Tests](https://github.com/mariontamnai/qa-portfolio/tree/main/cypress/e2e/voting-system)
 
 ---
 
